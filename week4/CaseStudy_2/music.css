@@ -1,0 +1,157 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blanchedalmond;
+}
+
+div.body {
+  min-width: 800px;
+  width: 80%;
+  min-height: max-content;
+  box-shadow: 10px 10px 10px black;
+}
+
+/* ==================== */
+/* ====== Header ====== */
+/* ==================== */
+
+header {
+  height: 5vh;
+  width: 100%;
+  background-color: #caab63;
+  text-align: start;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.content-header {
+  height: max-content;
+}
+
+.content-body {
+  display: flex;
+  justify-content: stretch;
+  width: 100%;
+}
+
+/* =================== */
+/* ======= Nav ======= */
+/* =================== */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+  padding: 10px 40px;
+  background-color: #e2d1b2;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: #b28e6f;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: #88766e;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+nav a:hover {
+  transition: ease-in 0.2s;
+  color: #79622c;
+}
+
+nav a:active {
+  color: #644c13;
+}
+
+/* ==================== */
+/* ======= Body ======= */
+/* ==================== */
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f5f5dd;
+}
+
+.content-body-header {
+  color: #4b3501;
+}
+
+.content-body-content {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+td {
+  padding-left: 10px;
+  color: #572301;
+}
+
+td h2 {
+  margin: 0;
+  padding-left: 10px;
+}
+
+.image-singer {
+  width: 100px;
+  height: auto;
+  padding: 40px;
+}
+
+td p.menu-price {
+  font-weight: 700;
+}
+
+td.menu-title {
+  padding: 0px 10px;
+  text-align: center;
+  font-weight: 700;
+}
+
+tr:nth-of-type(odd) {
+  background-color: #caab63;
+}
+
+/* ==================== */
+/* ====== Footer ====== */
+/* ==================== */
+
+footer.content-footer {
+  background-color: #caab63;
+  box-sizing: border-box;
+  padding: 20px 0px;
+}
+
+footer.content-footer p {
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.7em;
+}
+
+footer.content-footer a:link {
+  color: #684900;
+}
+
+footer.content-footer a:visited {
+  color: #241900;
+}
