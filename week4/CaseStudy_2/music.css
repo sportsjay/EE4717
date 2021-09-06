@@ -1,19 +1,16 @@
 body {
-  padding: 0;
-  margin: 0;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  min-height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   background-color: blanchedalmond;
 }
 
 div.body {
   min-width: 800px;
   width: 80%;
-  min-height: max-content;
+  min-height: min-content;
   box-shadow: 10px 10px 10px black;
 }
 
@@ -38,6 +35,7 @@ header {
 .content-body {
   display: flex;
   justify-content: stretch;
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -69,7 +67,11 @@ nav a:visited {
 }
 nav a:hover {
   transition: ease-in 0.2s;
-  color: #79622c;
+  color: red;
+}
+
+nav a:active {
+  color: #644c13;
 }
 
 nav a:active {
