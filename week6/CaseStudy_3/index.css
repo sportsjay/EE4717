@@ -1,0 +1,147 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  background-color: blanchedalmond;
+}
+
+div.body {
+  min-width: 800px;
+  width: 80%;
+  min-height: min-content;
+  box-shadow: 10px 10px 10px black;
+}
+
+/* ==================== */
+/* ====== Header ====== */
+/* ==================== */
+
+header {
+  height: 5vh;
+  width: 100%;
+  background-color: #caab63;
+  text-align: start;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.content-header {
+  height: max-content;
+}
+
+.content-body {
+  display: flex;
+  justify-content: stretch;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* =================== */
+/* ======= Nav ======= */
+/* =================== */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1em;
+  padding: 10px 40px;
+  background-color: #e2d1b2;
+}
+
+nav a:link {
+  text-decoration: none;
+  color: #b28e6f;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+nav a:visited {
+  text-decoration: none;
+  color: #88766e;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+nav a:hover {
+  transition: ease-in 0.2s;
+  color: red;
+}
+
+nav a:active {
+  color: #644c13;
+}
+
+/* ==================== */
+/* ======= Body ======= */
+/* ==================== */
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f5f5dd;
+}
+
+.content-body-header {
+  padding: 0px 20px;
+  color: #4b3501;
+}
+
+img.content-image {
+  min-width: 320px;
+  width: 500px;
+  height: auto;
+  image-rendering: optimizeQuality;
+}
+
+.content-body-content {
+  display: flex;
+  padding-bottom: 40px;
+  padding-left: 5%;
+}
+
+ul.content-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #976a01;
+  font-weight: 600;
+}
+
+ul.content-list li {
+  list-style-image: url("https://img.icons8.com/ios-glyphs/20/000000/coffee.png");
+}
+
+div.content-address p {
+  margin: 0px 20px;
+  color: #976a01;
+}
+
+/* ==================== */
+/* ====== Footer ====== */
+/* ==================== */
+
+footer.content-footer {
+  background-color: #caab63;
+  box-sizing: border-box;
+  padding: 20px 0px;
+}
+
+footer.content-footer p {
+  margin: 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.7em;
+}
+
+footer.content-footer a:link {
+  color: #684900;
+}
+
+footer.content-footer a:visited {
+  color: #241900;
+}
