@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaJam Coffee House - Jobs</title>
     <link rel="stylesheet" href="jobs.css" />
-    <script src="jobs.js"></script>
+    <script type="text/javascript" src="jobs.js"></script>
   </head>
   <body>
     <div class="body">
@@ -33,7 +33,13 @@
             </p>
           </div>
           <section class="content-body-content">
-            <form class="form" method="POST" action="show_post.php">
+            <form
+              enctype="multipart/form-data"
+              class="form"
+              method="POST"
+              action="show_post.php"
+              name="jobForm"
+            >
               <div>
                 <label>*Name: </label>
                 <input

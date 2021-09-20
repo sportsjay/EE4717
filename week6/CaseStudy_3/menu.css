@@ -122,6 +122,21 @@ tr:nth-of-type(odd) {
   background-color: #caab63;
 }
 
+.qty-input {
+  width: 80px;
+}
+
+.subtotal-price {
+  width: 80px;
+  text-align: center;
+}
+
+.content-total-price {
+  text-align: right;
+  padding: 0px 40px;
+  font-weight: 700;
+}
+
 /* ==================== */
 /* ====== Footer ====== */
 /* ==================== */
