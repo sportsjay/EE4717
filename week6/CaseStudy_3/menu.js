@@ -7,17 +7,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 function processTotalPrice() {
   const regularBlendPrice =
-    document.getElementById("regular-blend-subtotal-price")?.innerHTML ?? 0;
+    document.getElementById("regular-blend-subtotal-price")?.value ?? 0;
   const houseBlendPrice =
-    document.getElementById("house-blend-subtotal-price")?.innerHTML ?? 0;
+    document.getElementById("house-blend-subtotal-price")?.value ?? 0;
   const iceCappuccinoPrice =
-    document.getElementById("ice-cappuccino-subtotal-price")?.innerHTML ?? 0;
+    document.getElementById("ice-cappuccino-subtotal-price")?.value ?? 0;
 
   const totalPrice =
     parseFloat(regularBlendPrice) +
     parseFloat(houseBlendPrice) +
     parseFloat(iceCappuccinoPrice);
-  document.getElementById("total-price").innerHTML = `${totalPrice}`;
+  document.getElementById("total-price").value = `${totalPrice}`;
 }
 
 function onChangeQty(idName) {
@@ -27,7 +27,8 @@ function onChangeQty(idName) {
   // set to subtotal price
   if (idName === "regular-blend") {
     // if regular blend - size won't change so default by price = $2
-    document.getElementById(`${idName}-subtotal-price`).innerHTML = `${
+
+    document.getElementById(`${idName}-subtotal-price`).value = `${
       parseInt(val) * 2
     }`;
   } else {
@@ -35,7 +36,8 @@ function onChangeQty(idName) {
     const price = document.querySelector(
       `input[name="${idName}-price"]:checked`
     ).value;
-    document.getElementById(`${idName}-subtotal-price`).innerHTML = `${
+
+    document.getElementById(`${idName}-subtotal-price`).value = `${
       parseFloat(val) * parseFloat(price)
     }`;
   }
@@ -44,9 +46,6 @@ function onChangeQty(idName) {
 }
 
 function onChangePrice(idName) {
-  let val = document.querySelector(
-    `input[name="${idName}-price"]:checked`
-  ).value;
   onChangeQty(`${idName}`);
   processTotalPrice();
 }

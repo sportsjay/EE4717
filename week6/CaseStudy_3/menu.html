@@ -50,14 +50,15 @@
                   />
                 </td>
                 <td>
-                  <!-- <input
+                  <input
+                    id="regular-blend-subtotal-price"
                     type="number"
-                    value="0"
-                    name="regular-blend-subtotal-price"
-                  /> -->
-                  <p class="subtotal-price">
+                    readonly
+                    class="qty-input"
+                  />
+                  <!-- <p class="subtotal-price">
                     $<span id="regular-blend-subtotal-price"></span>
-                  </p>
+                  </p> -->
                 </td>
               </tr>
               <tr>
@@ -98,14 +99,15 @@
                   />
                 </td>
                 <td>
-                  <!-- <input
+                  <input
                     type="number"
-                    value="0"
-                    name="house-blend-subtotal-price"
-                  /> -->
-                  <p class="subtotal-price">
+                    readonly
+                    id="house-blend-subtotal-price"
+                    class="qty-input"
+                  />
+                  <!-- <p class="subtotal-price">
                     $<span id="house-blend-subtotal-price"></span>
-                  </p>
+                  </p> -->
                 </td>
               </tr>
               <tr>
@@ -147,20 +149,29 @@
                   />
                 </td>
                 <td>
-                  <!-- <input
+                  <input
                     type="number"
-                    value="0"
-                    name="ice-cappuccino-subtotal-price"
-                  /> -->
-                  <p class="subtotal-price">
+                    readonly
+                    id="ice-cappuccino-subtotal-price"
+                    class="qty-input"
+                  />
+                  <!-- <p class="subtotal-price">
                     $<span id="ice-cappuccino-subtotal-price"></span>
-                  </p>
+                  </p> -->
                 </td>
               </tr>
             </table>
           </section>
           <p class="content-total-price">
-            Total Price: $<span id="total-price" class="subtotal-price"></span>
+            Total Price:
+            <span>
+              <input
+                type="number"
+                readonly
+                id="total-price"
+                class="qty-input"
+              />
+            </span>
           </p>
         </section>
       </div>

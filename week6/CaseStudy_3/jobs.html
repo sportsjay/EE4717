@@ -33,18 +33,14 @@
             </p>
           </div>
           <section class="content-body-content">
-            <form
-              enctype="multipart/form-data"
-              class="form"
-              method="POST"
-              action="show_post.php"
-              name="jobForm"
-            >
+            <form enctype="multipart/form-data" class="form" name="jobForm">
               <div>
                 <label>*Name: </label>
                 <input
                   type="text"
                   name="fullname"
+                  id="fullname"
+                  onchange="onChangeUsername()"
                   placeholder="Enter your name here"
                   required
                 />
@@ -52,15 +48,16 @@
               <div>
                 <label>*E-mail: </label>
                 <input
-                  type="email"
                   name="email"
+                  id="email"
+                  onchange="onChangeEmail()"
                   placeholder="Enter your Email-ID here"
                   required
                 />
               </div>
               <div>
                 <label>Start Date: </label>
-                <input type="date" name="date" />
+                <input type="date" name="date" onchange="onChangeDate()" />
               </div>
               <div>
                 <label>*Experience: </label>
