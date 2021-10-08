@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaJam Coffee House - Jobs</title>
     <link rel="stylesheet" href="jobs.css" />
-    <script type="text/javascript" src="jobs.js"></script>
+    <!-- <script type="text/javascript" src="jobs.js"></script> -->
   </head>
   <body>
     <div class="body">
@@ -40,24 +40,25 @@
                   type="text"
                   name="fullname"
                   id="fullname"
-                  onchange="onChangeUsername()"
                   placeholder="Enter your name here"
                   required
                 />
+                <span id="isCheckUsername"></span>
               </div>
               <div>
                 <label>*E-mail: </label>
                 <input
                   name="email"
                   id="email"
-                  onchange="onChangeEmail()"
                   placeholder="Enter your Email-ID here"
                   required
                 />
+                <span id="isCheckEmail"></span>
               </div>
               <div>
                 <label>Start Date: </label>
-                <input type="date" name="date" onchange="onChangeDate()" />
+                <input type="date" name="date" id="date" />
+                <span id="isCheckDate"></span>
               </div>
               <div>
                 <label>*Experience: </label>
@@ -87,5 +88,56 @@
         </p>
       </footer>
     </div>
+    <script>
+      // input form
+      let username = "",
+        email = "";
+
+      const checkUsername = document.getElementById("isCheckUsername"),
+        checkEmail = document.getElementById("isCheckEmail"),
+        checkDate = document.getElementById("isCheckDate");
+
+      // add event listener
+      const usernameForm = document.querySelector("input[name='fullname']");
+      usernameForm.addEventListener("input", (event) => {
+        if (validateUsername(event.target.value))
+          checkUsername.innerHTML = "&#10004";
+        else checkUsername.innerHTML = "X";
+      });
+
+      const emailForm = document.querySelector("input[name='email']");
+      emailForm.addEventListener("input", (event) => {
+        if (validateEmail(event.target.value)) checkEmail.innerHTML = "&#10004";
+        else checkEmail.innerHTML = "X";
+      });
+
+      const dateForm = document.querySelector("input[type='date']");
+      dateForm.addEventListener("input", (event) => {
+        if (validateDate(event.target.value)) checkDate.innerHTML = "&#10004";
+        else {
+          checkDate.innerHTML = "X";
+          document.querySelector("input[type='date']").value = null;
+        }
+      });
+
+      // validator function
+      function validateUsername(username) {
+        let pattern = /^[A-Za-z|\s]+$/;
+        return pattern.test(username);
+      }
+
+      function validateEmail(email) {
+        let pattern = /^[a-zA-Z-.]+@(\w+\.){2,3}\w{2,3}$/;
+        return pattern.test(email);
+      }
+
+      function validateDate(date) {
+        let today = new Date(Date.now());
+        today.setDate(today.getDate());
+
+        if (Date.parse(date) > Date.parse(today)) return true;
+        return false;
+      }
+    </script>
   </body>
 </html>
