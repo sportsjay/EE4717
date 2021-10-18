@@ -1,3 +1,17 @@
+<?php
+$servername = "localhost";
+$username = "f32ee";
+$password = "f32ee";
+$dbname = "f32ee";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,7 +49,12 @@
                   Regular house blend, decaffeinated coffee, or flavor of the
                   day.
                 </p>
-                <p class="menu-price">Endless Cup $2.00</p>
+                <p class="menu-price">Endless Cup $<?php
+                                                    $sqlQuery = "SELECT price FROM CoffeeMenu WHERE name='Just Java'";
+                                                    $result = mysqli_query($conn, $sqlQuery);
+                                                    $row =  mysqli_fetch_assoc($result);
+                                                    echo $row["price"];
+                                                    ?></p>
               </td>
               <td>
                 <input class="qty-input" type="number" value="0" min="0" id="regular-blend-qty"
@@ -56,9 +75,19 @@
                 </p>
                 <form class="menu-price" onchange="onChangePrice('house-blend')">
                   <input type="radio" id="menu-price-radio" name="house-blend-price" value="2.00" checked />
-                    <label>Single $2.00</label>
+                    <label>Single $<?php
+                                    $sqlQuery = "SELECT price FROM CoffeeMenu WHERE name='Cafe au Lait (single)'";
+                                    $result = mysqli_query($conn, $sqlQuery);
+                                    $row =  mysqli_fetch_assoc($result);
+                                    echo $row["price"];
+                                    ?></label>
                   <input type="radio" id="menu-price-radio" name="house-blend-price" value="3.00" />
-                    <label>Double $3.00</label>
+                    <label>Double $<?php
+                                    $sqlQuery = "SELECT price FROM CoffeeMenu WHERE name='Cafe au Lait (double)'";
+                                    $result = mysqli_query($conn, $sqlQuery);
+                                    $row =  mysqli_fetch_assoc($result);
+                                    echo $row["price"];
+                                    ?></label>
                 </form>
               </td>
               <td>
@@ -81,9 +110,19 @@
                 </p>
                 <form class="menu-price" onchange="onChangePrice('ice-cappuccino')">
                   <input type="radio" id="menu-price-radio" name="ice-cappuccino-price" value="4.75" checked />
-                    <label>Single $4.75</label>
+                    <label>Single $<?php
+                                    $sqlQuery = "SELECT price FROM CoffeeMenu WHERE name='Iced Cappuccino (single)'";
+                                    $result = mysqli_query($conn, $sqlQuery);
+                                    $row =  mysqli_fetch_assoc($result);
+                                    echo $row["price"];
+                                    ?></label>
                   <input type="radio" id="menu-price-radio" name="ice-cappuccino-price" value="5.75" />
-                    <label>Double $5.75</label>
+                    <label>Double $<?php
+                                    $sqlQuery = "SELECT price FROM CoffeeMenu WHERE name='Iced Cappuccino (double)'";
+                                    $result = mysqli_query($conn, $sqlQuery);
+                                    $row =  mysqli_fetch_assoc($result);
+                                    echo $row["price"];
+                                    ?></label>
                 </form>
               </td>
               <td>
